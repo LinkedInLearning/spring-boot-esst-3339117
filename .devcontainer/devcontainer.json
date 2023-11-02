@@ -30,9 +30,7 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"GitHub.github-vscode-theme",
-				"vmware.vscode-boot-dev-pack",
-				"vscjava.vscode-gradle",
-				"vscjava.vscode-maven",
+				"vmware.vscode-boot-dev-pack"
 			]
 		}
 	},
