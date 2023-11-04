@@ -19,9 +19,16 @@ public class DemoWebTests {
   private TestRestTemplate restTemplate;
 
   @Test
-  void greetingShouldReturnMessage() throws Exception {
+  void greetingRestShouldReturnMessage() throws Exception {
     var url = "http://localhost:" + port + "/greeting";
     var body = this.restTemplate.getForObject(url, String.class);
     assertTrue(body.contains("getting started"));
+  }
+
+  @Test
+  void greetingWebShouldReturnMessage() throws Exception {
+    var url = "http://localhost:" + port + "/www/greeting";
+    var body = this.restTemplate.getForObject(url, String.class);
+    assertTrue(body.contains("<h1"));
   }
 }

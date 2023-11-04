@@ -23,3 +23,19 @@ GET http://localhost:8080/dirty-secrets/{{id}}
 ###
 
 GET http://localhost:8080/nothing-here
+
+###
+
+GET http://localhost:8080/www/greeting
+
+###
+
+GET http://localhost:8080/dirty-secrets/v2a/nothing-here
+
+###
+
+GET http://localhost:8080/dirty-secrets/v2b/nothing-here
+
+###
+
+GET http://localhost:8080/dirty-secrets/v2c/nothing-here
