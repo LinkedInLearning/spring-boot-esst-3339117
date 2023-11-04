@@ -10,16 +10,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.UUID;
 import java.util.Collection;
-import java.util.HashMap;
 
 @RestController
 @RequestMapping("/dirty-secrets")
 
 public class DirtySecretController {
 
-  private Map<String, DirtySecret> secrets = new HashMap<String, DirtySecret>();
+  private Map<String, DirtySecret> secrets = new TreeMap<String, DirtySecret>();
 
   @GetMapping
   public Collection<DirtySecret> get() {
