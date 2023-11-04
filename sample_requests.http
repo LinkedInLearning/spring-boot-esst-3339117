@@ -1,1 +1,22 @@
 GET http://localhost:8080/greeting
+
+
+###
+
+GET http://localhost:8080/dirty-secrets
+
+###
+
+POST http://localhost:8080/dirty-secrets
+Content-Type: application/json
+
+{
+  "name": "Freddy",
+  "secret": "Killed an elderly couple and did time."
+}
+
+###
+
+@id = 30350714-149f-408f-8d30-685697f59411
+
+GET http://localhost:8080/dirty-secrets/{{id}}
