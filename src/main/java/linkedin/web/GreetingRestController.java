@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 @RequestMapping("/greeting")
-public class GreetingController {
+public class GreetingRestController {
 
   @GetMapping
   public String get(@RequestParam(defaultValue = "America", required = false) String name) {
