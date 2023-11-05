@@ -1,4 +1,4 @@
-package linkedin.web;
+package linkedin.data;
 
 public class DirtySecret {
 
