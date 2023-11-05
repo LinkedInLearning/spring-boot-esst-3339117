@@ -15,3 +15,14 @@ Content-Type: application/json
 @id = cb3099a9-dc72-479d-bf79-62eaf2af5c51
 
 GET http://localhost:8080/dirty-secrets/{{id}}
+
+
+### 
+
+DELETE http://localhost:8080/dirty-secrets
+Content-Type: application/json
+
+[
+  "cb3099a9-dc72-479d-bf79-62eaf2af5c51",
+  "db3099a9-dc72-479d-bf79-62eaf2af5c52"
+]
