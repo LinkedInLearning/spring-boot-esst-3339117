@@ -1,4 +1,4 @@
-package linkedin.web;
+package linkedin.webflux;
 
 public class DirtySecret {
 

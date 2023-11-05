@@ -1,4 +1,4 @@
-package linkedin.web;
+package linkedin.webflux;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
