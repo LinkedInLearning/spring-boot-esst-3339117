@@ -27,7 +27,7 @@ public class DirtySecretsRestController {
   }
 
   @GetMapping("/{id}")
-  public DirtySecret getByIdV2a(@PathVariable String id) {
+  public DirtySecret getById(@PathVariable String id) {
     return this.repository.findById(UUID.fromString(id))
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Found nothing."));
   }
