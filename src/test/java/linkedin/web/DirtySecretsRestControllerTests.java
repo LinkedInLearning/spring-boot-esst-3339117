@@ -8,8 +8,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-@WebMvcTest(DirtySecretController.class)
-public class DirtySecretControllerTests {
+@WebMvcTest(DirtySecretsRestController.class)
+public class DirtySecretsRestControllerTests {
 
   @Autowired
   private MockMvc mockMvc;

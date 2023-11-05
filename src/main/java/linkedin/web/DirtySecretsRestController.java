@@ -2,7 +2,6 @@ package linkedin.web;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-import org.springframework.core.Ordered;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -19,8 +18,7 @@ import java.util.Collection;
 
 @RestController
 @RequestMapping("/dirty-secrets")
-
-public class DirtySecretController {
+public class DirtySecretsRestController {
 
   private Map<String, DirtySecret> secrets = new TreeMap<String, DirtySecret>();
 
