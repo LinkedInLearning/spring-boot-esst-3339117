@@ -20,39 +20,32 @@ import java.util.Collection;
 @RequestMapping("/dirty-secrets")
 public class DirtySecretsRestController {
 
+  private final DirtySecretsRepository repository;
+
+  public DirtySecretsRestController(DirtySecretsRepository repository) {
+    this.repository = repository;
+  }
+
   private Map<String, DirtySecret> secrets = new TreeMap<String, DirtySecret>();
 
   @GetMapping
-  public Collection<DirtySecret> get() {
-    return this.secrets.values();
+  public Iterable<DirtySecret> get() {
+    return this.repository.findAll();
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<DirtySecret> getById(@PathVariable String id) {
-    if (!this.secrets.containsKey(id)) {
-      return ResponseEntity.notFound().build();
-    }
-    return ResponseEntity.ok().body(this.secrets.get(id));
-  }
-
-  @GetMapping("/v2a/{id}")
   public DirtySecret getByIdV2a(@PathVariable String id) {
-    if (!this.secrets.containsKey(id)) {
-      throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Found nothing.");
-    }
-    return this.secrets.get(id);
+    return this.repository.findById(UUID.fromString(id))
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Found nothing."));
   }
 
   @PostMapping
   public DirtySecret post(@RequestBody DirtySecret secret) {
-    // Id generieren
-    secret.setId(UUID.randomUUID().toString());
-
-    // Secret merken
-    this.secrets.put(secret.getId(), secret);
+    // Secret speichern
+    var savedSecret = this.repository.save(secret);
 
     // Secret mit Id zurück geben
-    return secret;
+    return savedSecret;
   }
 
 }

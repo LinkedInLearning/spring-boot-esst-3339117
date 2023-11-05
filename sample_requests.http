@@ -1,7 +1,3 @@
-GET http://localhost:8080/greeting
-
-###
-
 GET http://localhost:8080/dirty-secrets
 
 ###
@@ -16,26 +12,6 @@ Content-Type: application/json
 
 ###
 
-@id = 30350714-149f-408f-8d30-685697f59411
+@id = cb3099a9-dc72-479d-bf79-62eaf2af5c51
 
 GET http://localhost:8080/dirty-secrets/{{id}}
-
-###
-
-GET http://localhost:8080/nothing-here
-
-###
-
-GET http://localhost:8080/www/greeting
-
-###
-
-GET http://localhost:8080/dirty-secrets/v2a/nothing-here
-
-###
-
-GET http://localhost:8080/dirty-secrets/v2b/nothing-here
-
-###
-
-GET http://localhost:8080/dirty-secrets/v2c/nothing-here
