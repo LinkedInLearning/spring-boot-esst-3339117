@@ -25,15 +25,15 @@ class DirtySecretsRepositoryTests {
 
 	@Test
 	void shouldSaveDirtySecretInPostgres() {
-		// Secret erstellen
+		// 1. Secret erstellen
 		var dirtySecret = new DirtySecret();
 		dirtySecret.setName("Freddy");
 		dirtySecret.setSecret("Killed an elderly couple and did time.");
 
-		// Secret speichern
+		// 2. Secret speichern
 		var savedSecret = this.repository.save(dirtySecret);
 
-		// Generierte Id prüfen
+		// 3. Generierte Id prüfen
 		assertNotNull(savedSecret.getId());
 	}
 
