@@ -3,8 +3,6 @@ package linkedin.data;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,15 +26,7 @@ public class DirtySecretsRestController {
   }
 
   @GetMapping("/{id}")
-  public ResponseEntity<DirtySecret> getById(@PathVariable String id) {
-    if (!this.secrets.containsKey(id)) {
-      return ResponseEntity.notFound().build();
-    }
-    return ResponseEntity.ok().body(this.secrets.get(id));
-  }
-
-  @GetMapping("/v2a/{id}")
-  public DirtySecret getByIdV2a(@PathVariable String id) {
+  public DirtySecret getById(@PathVariable String id) {
     if (!this.secrets.containsKey(id)) {
       throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Found nothing.");
     }
