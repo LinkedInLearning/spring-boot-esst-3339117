@@ -18,7 +18,7 @@
 	],
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
-			"version": "none",
+			"version": "17.0.9-tem",
 			"installGradle": "true",
 			"installMaven": "true"
 		}
