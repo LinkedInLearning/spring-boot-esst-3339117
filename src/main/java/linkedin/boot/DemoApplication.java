@@ -1,4 +1,4 @@
-package linkedin.data;
+package linkedin.boot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -2,7 +2,6 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.5'
 	id 'io.spring.dependency-management' version '1.1.3'
-	id 'org.graalvm.buildtools.native' version '0.9.27'
 }
 
 group = 'linkedin'
@@ -17,24 +16,12 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
-
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-// Customize Docker Image
-tasks.named("bootBuildImage") {
-	// Native GraalVM Image
-  builder = 'paketobuildpacks/builder-jammy-tiny:latest'
-
-	environment["BPE_APPEND_JAVA_TOOL_OPTIONS"] = "-XX:+HeapDumpOnOutOfMemoryError"
-	imageName = "linkedin.${project.name}:${project.version}"
 }
