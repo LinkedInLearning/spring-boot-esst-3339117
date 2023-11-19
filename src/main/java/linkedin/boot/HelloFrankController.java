@@ -8,6 +8,7 @@ public class HelloFrankController {
 
   private HelloFrankService service;
 
+  // Konstruktur Injection
   public HelloFrankController(HelloFrankService service) {
     this.service = service;
   }
