@@ -16,8 +16,6 @@
 		"--security-opt",
 		"seccomp=unconfined"
 	],
-	// Set *default* container specific settings.json values on container create.
-	"settings": {},
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {
 			"version": "none",
@@ -30,6 +28,7 @@
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"GitHub.github-vscode-theme",
+				"vscjava.vscode-java-pack",
 				"vmware.vscode-boot-dev-pack"
 			]
 		}
