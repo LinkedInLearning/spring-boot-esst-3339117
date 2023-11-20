@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=dirtysecrets'
+      - 'POSTGRES_PASSWORD=linkedin'
+      - 'POSTGRES_USER=linkedin'
+    ports:
+      - '5432'
