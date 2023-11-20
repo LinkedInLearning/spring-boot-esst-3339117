@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloFrankController {
 
   @Autowired
-  private HelloFrankService service;
+  private GreetingService service;
 
   // Konstruktur-Injection
   // public HelloFrankController(HelloFrankService service) {
