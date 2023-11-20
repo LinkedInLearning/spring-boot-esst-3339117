@@ -61,8 +61,6 @@ public class DirtySecretsRestController {
 
   @ExceptionHandler({ NoSecretFoundException.class })
   public ResponseEntity<String> handleNoSecretFoundException() {
-    // Render custom Message
-    
     return ResponseEntity.internalServerError().body("No secret found.");
   }
 
