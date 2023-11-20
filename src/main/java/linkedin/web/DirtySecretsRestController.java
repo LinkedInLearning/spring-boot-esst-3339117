@@ -22,9 +22,9 @@ public class DirtySecretsRestController {
   }
 
   // @GetMapping("/{id}")
-  // public DirtySecret getById(@PathVariable String id) {
-  //   var secret = this.repository.getById(id);
-  //   return secret.get();
+  // public DirtySecret getById2(@PathVariable String id) {
+  // var secret = this.repository.getById(id);
+  // return secret.orElseThrow();
   // }
 
   @GetMapping("/{id}")
