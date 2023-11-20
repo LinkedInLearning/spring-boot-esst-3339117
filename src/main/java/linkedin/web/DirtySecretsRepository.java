@@ -2,9 +2,9 @@ package linkedin.web;
 
 import java.util.*;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class DirtySecretsRepository {
 
   private Map<String, DirtySecret> secrets = new TreeMap<>();
@@ -18,7 +18,7 @@ public class DirtySecretsRepository {
   }
 
   Optional<DirtySecret> getById(String id) {
-    if (this.secrets.containsKey(id)) {
+    if (!this.secrets.containsKey(id)) {
       return Optional.empty();
     }
     return Optional.of(this.secrets.get(id));
