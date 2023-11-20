@@ -17,11 +17,15 @@ public class DirtySecretsRepository {
     this.secrets.put(secret.getId(), secret);
   }
 
-  Optional<DirtySecret> getById(UUID id) {
+  Optional<DirtySecret> findById(UUID id) {
     if (!this.secrets.containsKey(id)) {
       return Optional.empty();
     }
     return Optional.of(this.secrets.get(id));
+  }
+
+  Collection<DirtySecret> findAll() {
+    return this.secrets.values();
   }
 
   int count() {

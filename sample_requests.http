@@ -12,6 +12,6 @@ Content-Type: application/json
 
 ###
 
-@id = cb3099a9-dc72-479d-bf79-62eaf2af5c51
+@id = 53836a8f-0c30-427e-8d4d-658809b2e97b
 
 GET http://localhost:8080/dirty-secrets/{{id}}
