@@ -21,6 +21,12 @@ public class DirtySecretsRestController {
     return this.repository.count();
   }
 
+  // @GetMapping("/{id}")
+  // public DirtySecret getById(@PathVariable String id) {
+  //   var secret = this.repository.getById(id);
+  //   return secret.get();
+  // }
+
   @GetMapping("/{id}")
   public ResponseEntity<DirtySecret> getById(@PathVariable String id) {
     var secret = this.repository.getById(id);
