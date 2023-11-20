@@ -1,9 +1,0 @@
-GET http://localhost:8080/dirty-secrets/count
-
-###
-
-GET http://localhost:8080/dirty-secrets/test-123
-
-###
-
-GET http://localhost:8080/dirty-secrets/not-found-456
