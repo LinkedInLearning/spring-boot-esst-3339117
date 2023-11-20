@@ -1,21 +1,9 @@
-GET http://localhost:8080/dirty-secrets
-
-###
-
 GET http://localhost:8080/dirty-secrets/count
 
 ###
 
-POST http://localhost:8080/dirty-secrets
-Content-Type: application/json
-
-{
-  "name": "Freddy",
-  "secret": "Killed an elderly couple and did time."
-}
+GET http://localhost:8080/dirty-secrets/test-123
 
 ###
 
-@id = test-123
-
-GET http://localhost:8080/dirty-secrets/{{id}}
+GET http://localhost:8080/dirty-secrets/not-found-456
