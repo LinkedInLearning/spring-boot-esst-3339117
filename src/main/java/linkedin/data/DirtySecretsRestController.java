@@ -15,7 +15,7 @@ import java.util.UUID;
 @RequestMapping("/dirty-secrets")
 public class DirtySecretsRestController {
 
-  private final DirtySecretsRepository repository;
+  private DirtySecretsRepository repository;
 
   public DirtySecretsRestController(DirtySecretsRepository repository) {
     this.repository = repository;
@@ -27,7 +27,7 @@ public class DirtySecretsRestController {
   }
 
   @GetMapping("/{id}")
-  public DirtySecret getByIdV2a(@PathVariable String id) {
+  public DirtySecret getById(@PathVariable String id) {
     return this.repository.findById(UUID.fromString(id))
         .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Found nothing."));
   }
