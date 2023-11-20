@@ -13,7 +13,7 @@ public class DirtySecretsRestController {
     this.repository = repository;
   }
 
-  @GetMapping("/e1/{id}")
+  @GetMapping("/{id}")
   public DirtySecret getById(@PathVariable String id) {
     return this.repository.getById(id).orElseThrow();
   }
