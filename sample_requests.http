@@ -1,19 +1,16 @@
 GET http://localhost:8080/greeting
-Accept: text/plain
 
 ###
 
 GET http://localhost:8080/greeting?name=Utah
-Accept: text/plain
 
 ###
 
-GET http://localhost:8080/greeting
-Accept: application/json
+GET http://localhost:8080/greeting/json
+
 ###
 
-GET http://localhost:8080/greeting?name=Utah
-Accept: application/json
+GET http://localhost:8080/greeting/json?name=Utah
 
 ###
 
