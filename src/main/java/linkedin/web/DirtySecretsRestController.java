@@ -13,14 +13,9 @@ public class DirtySecretsRestController {
     this.repository = repository;
   }
 
-  @GetMapping("/{id}")
+  @GetMapping("/e1/{id}")
   public DirtySecret getById(@PathVariable String id) {
     return this.repository.getById(id).orElseThrow();
-  }
-
-  @PostMapping
-  public DirtySecret post(@RequestBody DirtySecret secret) {
-    return this.repository.save(secret);
   }
 
 }
