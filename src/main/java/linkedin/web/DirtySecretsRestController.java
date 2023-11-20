@@ -1,5 +1,9 @@
 package linkedin.web;
 
+import java.util.Map;
+import java.util.TreeMap;
+import java.util.UUID;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,20 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/dirty-secrets")
 public class DirtySecretsRestController {
 
-  private DirtySecretsRepository repository;
-
-  public DirtySecretsRestController(DirtySecretsRepository repository) {
-    this.repository = repository;
-  }
-
-  @GetMapping("/{id}")
-  public DirtySecret getById(@PathVariable String id) {
-    return this.repository.getById(id).orElseThrow();
-  }
+  private Map<String, DirtySecret> secrets = new TreeMap<>();
 
   @PostMapping
   public DirtySecret post(@RequestBody DirtySecret secret) {
-    return this.repository.save(secret);
+    // Id generieren
+    secret.setId(UUID.randomUUID().toString());
+
+    // Secret merken
+    this.secrets.put(secret.getId(), secret);
+
+    // Secret mit Id zurück geben
+    return secret;
   }
 
 }
