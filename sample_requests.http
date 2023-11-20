@@ -1,11 +1,5 @@
 GET http://localhost:8080/dirty-secrets/count
-Accept: text/plain
 
 ###
 
 GET http://localhost:8080/dirty-secrets/test-123
-Accept: application/json
-
-###
-
-GET http://localhost:8080/dirty-secrets/not-found-456
