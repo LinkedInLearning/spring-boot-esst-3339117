@@ -21,19 +21,10 @@ public class DirtySecretsRestController {
     return this.repository.count();
   }
 
-  // @GetMapping("/{id}")
-  // public DirtySecret getById2(@PathVariable String id) {
-  // var secret = this.repository.getById(id);
-  // return secret.orElseThrow();
-  // }
-
   @GetMapping("/{id}")
-  public ResponseEntity<DirtySecret> getById(@PathVariable String id) {
+  public DirtySecret getById(@PathVariable String id) {
     var secret = this.repository.getById(id);
-    if (secret.isEmpty()) {
-      return ResponseEntity.notFound().build();
-    }
-    return ResponseEntity.ok().body(secret.get());
+    return secret.orElseThrow();
   }
 
 }
