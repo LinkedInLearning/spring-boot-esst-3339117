@@ -1,12 +1,8 @@
-GET http://localhost:9090/actuator
+GET http://localhost:8080/actuator
 
 ###
 
 GET http://localhost:9090/actuator/health
-
-###
-
-GET http://localhost:9090/actuator/info
 
 ###
 GET http://localhost:9090/actuator/metrics/jvm.memory.used
