@@ -28,9 +28,3 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
-
-// Customize Docker Image
-tasks.named("bootBuildImage") {
-	environment["BPE_APPEND_JAVA_TOOL_OPTIONS"] = "-XX:+HeapDumpOnOutOfMemoryError"
-	imageName = "linkedin.${project.name}:${project.version}"
-}
