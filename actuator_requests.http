@@ -11,13 +11,3 @@ GET http://localhost:9090/actuator/info
 ###
 GET http://localhost:9090/actuator/metrics/jvm.memory.used
 
-###
-
-GET http://localhost:9090/log
-
-###
-
-POST http://localhost:9090/actuator/loggers/linkedin.data
-Content-Type: application/json
-
-{ "configuredLevel": "ERROR" }
