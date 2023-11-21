@@ -1,7 +1,3 @@
-GET http://localhost:8080/dirty-secrets
-
-###
-
 POST http://localhost:8080/dirty-secrets
 Content-Type: application/json
 
@@ -12,6 +8,24 @@ Content-Type: application/json
 
 ###
 
-@id = cb3099a9-dc72-479d-bf79-62eaf2af5c51
+POST http://localhost:8080/dirty-secrets
+Content-Type: application/json
 
-GET http://localhost:8080/dirty-secrets/{{id}}
+{
+  "name": "Doug",
+  "secret": "Former Alcoholic."
+}
+
+###
+
+GET http://localhost:8080/dirty-secrets
+
+###
+
+DELETE http://localhost:8080/dirty-secrets
+Content-Type: application/json
+
+[
+  "6c6ad75e-8071-4331-a4b1-6418de99c62f",
+  "80390247-3568-4df5-a09b-ef6cc0b8cb44"
+]

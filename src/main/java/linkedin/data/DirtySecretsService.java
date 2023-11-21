@@ -15,9 +15,5 @@ public class DirtySecretsService {
     this.repository = repository;
   }
 
-  @Transactional
-  public void deleteAll(List<UUID> secretIds) {
-    secretIds.forEach(((id) -> this.repository.deleteById(id)));
-  }
 
 }
