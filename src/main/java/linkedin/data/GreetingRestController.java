@@ -10,13 +10,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/greeting")
 public class GreetingRestController {
 
-  @Value("${linkedin.greeting}")
-  private String greeting;
-
   @GetMapping
   public String get(@RequestParam(defaultValue = "America", required = false) String name) {
-    // return String.format("%s, I'm only getting started.", name);
-    return this.greeting;
+    return String.format("%s, I'm only getting started.", name);
   }
 
 }
