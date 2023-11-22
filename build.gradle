@@ -18,20 +18,13 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	
-	// Servlet Container Tomcat
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-
-	// Servlet Container Undertow
-	/**
-  implementation('org.springframework.boot:spring-boot-starter-web') {
-    exclude group:'org.springframework.boot', module:'spring-boot-starter-tomcat'
-  }
-  implementation 'org.springframework.boot:spring-boot-starter-undertow'
-	 */
-
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('bootBuildImage') {
+	builder = 'paketobuildpacks/builder-jammy-base:latest'
 }
 
 tasks.named('test') {
