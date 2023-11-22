@@ -1,17 +1,15 @@
 package linkedin.bbq_joint;
 
+import java.util.List;
 import java.util.UUID;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+public class OrderModel {
 
-@Entity
-public class MenuItem {
-
-  @Id
   private UUID id;
 
   private String name;
+
+  private List<UUID> menuItemIds;
 
   public UUID getId() {
     return id;
@@ -27,6 +25,14 @@ public class MenuItem {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public List<UUID> getMenuItemIds() {
+    return menuItemIds;
+  }
+
+  public void setMenuItemIds(List<UUID> menuItemIds) {
+    this.menuItemIds = menuItemIds;
   }
 
 }

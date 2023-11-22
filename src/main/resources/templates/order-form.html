@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>Freddy's BBQ Joint - Menu</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel='stylesheet' href='/webjars/bootstrap/5.3.2/css/bootstrap.min.css'>
+</head>
+
+<body>
+  <h1>Welcome to Freddy's BBQ Joint</h1>
+</body>
+
+<div class="alert alert-warning" role="alert" th:if="${#lists.isEmpty(menuItems)}">
+  Oh f***, our menu is empty. Ask Freddy to put something on!
+</div>
+
+<form method="POST" th:action="@{/orders/place}" th:object="${orderForm}">
+  <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="text" path="name" class="form-control" th:field="*{name}" placeholder="Your Name">
+    </form:input>
+  </div>
+
+  <select class="form-select" th:field="*{newMenuItemId}" aria-label="Default select example">
+    <option th:each="menuItem: ${menuItems}" th:value="${menuItem.id}" th:text="${menuItem.name}"></option>
+  </select>
+
+  <button type="submit">Place</button>
+</form>
+
+</html>

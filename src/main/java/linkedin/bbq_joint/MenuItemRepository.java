@@ -1,5 +1,11 @@
 package linkedin.bbq_joint;
 
-public interface MenuItemRepository {
-  
+import java.util.UUID;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface MenuItemRepository extends CrudRepository<MenuItem, UUID> {
+
+  Iterable<MenuItem> findByOrderByNameDesc();
+
 }

@@ -1,0 +1,27 @@
+POST http://localhost:8080/menu-items
+Content-Type: application/json
+
+{
+  "id": "00000000-0000-0000-0000-000000000001",
+  "name": "Freddy's Ribs Special"
+}
+
+###
+
+POST http://localhost:8080/menu-items
+Content-Type: application/json
+
+{
+  "id": "00000000-0000-0000-0000-000000000002",
+  "name": "Freddy's Lemonade"
+}
+
+###
+
+POST http://localhost:8080/menu-items
+Content-Type: application/json
+
+{
+  "id": "00000000-0000-0000-0000-000000000003",
+  "name": "Coleslaw Salad"
+}
