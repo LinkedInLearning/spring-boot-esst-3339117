@@ -8,4 +8,6 @@ public interface MenuItemRepository extends CrudRepository<MenuItem, UUID> {
 
   Iterable<MenuItem> findByOrderByNameDesc();
 
+  Iterable<MenuItem> findByDrinkOrderByNameDesc(boolean drink);
+
 }

@@ -3,7 +3,8 @@ Content-Type: application/json
 
 {
   "id": "00000000-0000-0000-0000-000000000001",
-  "name": "Freddy's Ribs Special"
+  "name": "Freddy's Ribs Special",
+  "price": 20
 }
 
 ###
@@ -13,7 +14,9 @@ Content-Type: application/json
 
 {
   "id": "00000000-0000-0000-0000-000000000002",
-  "name": "Freddy's Lemonade"
+  "name": "Freddy's Lemonade",
+  "price": 5,
+  "drink": true
 }
 
 ###
@@ -23,5 +26,6 @@ Content-Type: application/json
 
 {
   "id": "00000000-0000-0000-0000-000000000003",
-  "name": "Coleslaw Salad"
+  "name": "Coleslaw Salad",
+  "price": 3
 }

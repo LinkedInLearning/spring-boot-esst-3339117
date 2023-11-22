@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <title>Freddy's BBQ Joint - Menu</title>
+  <title>Freddy's BBQ Joint - Place Order</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel='stylesheet' href='/webjars/bootstrap/5.3.2/css/bootstrap.min.css'>
 </head>
@@ -17,14 +17,26 @@
 
 <form method="POST" th:action="@{/orders/place}" th:object="${orderForm}">
   <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="text" path="name" class="form-control" th:field="*{name}" placeholder="Your Name">
+    <label for="name" class="form-label">Your Name</label>
+    <input id="name" type="text" path="name" class="form-control" th:field="*{name}" placeholder="Your Name">
     </form:input>
   </div>
 
-  <select class="form-select" th:field="*{newMenuItemId}" aria-label="Default select example">
-    <option th:each="menuItem: ${menuItems}" th:value="${menuItem.id}" th:text="${menuItem.name}"></option>
-  </select>
+  <div class="mb-3">
+    <label for="drinkId" class="form-label">You Drink</label>
+    <select id="drinkId" class="form-select" th:field="*{drinkId}" aria-label="Default select example">
+      <option selected value="">- Have a drink! -</option>
+      <option th:each="menuItem: ${drinkItems}" th:value="${menuItem.id}" th:text="${menuItem.name}"></option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="foodId" class="form-label">You Eat</label>
+    <select id="foodId" class="form-select" th:field="*{foodId}" aria-label="Default select example">
+      <option selected value="">- Select a treat! -</option>
+      <option th:each="menuItem: ${foodItems}" th:value="${menuItem.id}" th:text="${menuItem.name}"></option>
+    </select>
+  </div>
 
   <button type="submit">Place</button>
 </form>

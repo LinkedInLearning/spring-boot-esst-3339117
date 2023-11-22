@@ -13,6 +13,10 @@ public class MenuItem {
 
   private String name;
 
+  private Integer price;
+
+  private boolean drink = false;
+
   public UUID getId() {
     return id;
   }
@@ -27,6 +31,22 @@ public class MenuItem {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public boolean isDrink() {
+    return drink;
+  }
+
+  public void setDrink(boolean drink) {
+    this.drink = drink;
+  }
+
+  public Integer getPrice() {
+    return price;
+  }
+
+  public void setPrice(Integer price) {
+    this.price = price;
   }
 
 }

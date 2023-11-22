@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -22,9 +24,13 @@ public class Order {
 
   private String name;
 
-  @OneToMany
-  @JoinTable(name = "order_items", joinColumns = @JoinColumn(name = "order_id"), inverseJoinColumns = @JoinColumn(name = "menu_item_id"))
-  private List<MenuItem> menuItems;
+  @ManyToOne()
+  @JoinColumn(name = "drink_id")
+  private MenuItem drink;
+
+  @ManyToOne()
+  @JoinColumn(name = "food_id")
+  private MenuItem food;
 
   public UUID getId() {
     return id;
@@ -42,12 +48,20 @@ public class Order {
     this.name = name;
   }
 
-  public void setMenuItems(List<MenuItem> menuItems) {
-    this.menuItems = menuItems;
+  public MenuItem getDrink() {
+    return drink;
   }
 
-  public List<MenuItem> getMenuItems() {
-    return menuItems;
+  public void setDrink(MenuItem drink) {
+    this.drink = drink;
+  }
+
+  public MenuItem getFood() {
+    return food;
+  }
+
+  public void setFood(MenuItem food) {
+    this.food = food;
   }
 
 }

@@ -4,7 +4,8 @@ public class OrderForm {
 
   private String name;
 
-  private String newMenuItemId;
+  private String drinkId;
+  private String foodId;
 
   public String getName() {
     return name;
@@ -14,12 +15,20 @@ public class OrderForm {
     this.name = name;
   }
 
-  public String getNewMenuItemId() {
-    return newMenuItemId;
+  public String getDrinkId() {
+    return drinkId;
   }
 
-  public void setNewMenuItemId(String newMenuItemId) {
-    this.newMenuItemId = newMenuItemId;
+  public void setDrinkId(String drinkId) {
+    this.drinkId = drinkId;
+  }
+
+  public String getFoodId() {
+    return foodId;
+  }
+
+  public void setFoodId(String foodId) {
+    this.foodId = foodId;
   }
 
 }

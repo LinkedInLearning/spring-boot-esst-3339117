@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-  <title>Freddy's BBQ Joint - Menu</title>
+  <title>Freddy's BBQ Joint - Order Placed!</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <link rel='stylesheet' href='/webjars/bootstrap/5.3.2/css/bootstrap.min.css'>
 </head>
@@ -14,5 +14,9 @@
 <div class="alert alert-warning" role="alert">
   We got it! <span th:text="${orderForm.name}"></span>
 </div>
+
+<span th:if="${orderPlaced.drink}">
+  <span th:text="${orderPlaced.drink.name}"></span>
+</span>
 
 </html>
