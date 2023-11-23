@@ -18,7 +18,7 @@ public class MenuItemRestController {
   }
 
   @GetMapping
-  public Iterable<MenuItem> getMethodName(@RequestParam(name = "drink", defaultValue = "false") String isDrink) {
+  public Iterable<MenuItem> get(@RequestParam(name = "drink", defaultValue = "false") String isDrink) {
     return this.menuItemRepository.findByDrinkOrderByNameDesc(Boolean.parseBoolean(isDrink));
   }
 
