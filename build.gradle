@@ -21,6 +21,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// Web Dependencies
+	// implementation 'org.springframework.boot:spring-boot-starter-web'
+	// implementation 'org.webjars:bootstrap:5.3.2'
+	// implementation 'org.webjars:font-awesome:6.4.2'
+	// implementation 'org.webjars:webjars-locator-core:0.48'
 }
 
 tasks.named('bootBuildImage') {
