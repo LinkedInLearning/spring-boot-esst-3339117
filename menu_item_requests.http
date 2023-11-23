@@ -32,4 +32,8 @@ Content-Type: application/json
 
 ### 
 
-POST http://localhost:8080/menu-items?drink=true
+GET http://localhost:8080/menu-items?drink=true
+
+### 
+
+GET http://localhost:8080/menu-items
