@@ -17,7 +17,7 @@ public class HomeWebController {
 
   @GetMapping()
   public String getMethodName(Model model) {
-    model.addAttribute("menuItems", menuItemRepository.findByOrderByNameDesc());
+    model.addAttribute("menuItems", menuItemRepository.findByOrderByDrinkDescNameDesc());
     return "home";
   }
 

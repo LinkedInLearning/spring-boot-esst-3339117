@@ -49,4 +49,9 @@ public class MenuItem {
     this.price = price;
   }
 
+  @Override
+  public String toString() {
+    return String.format("MenuItem<id: %s, name: %s, price: %s>", id, name, price);
+  }
+
 }

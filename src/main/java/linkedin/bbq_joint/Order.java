@@ -60,4 +60,9 @@ public class Order {
     this.food = food;
   }
 
+  @Override
+  public String toString() {
+    return String.format("Order<id: %s, drink: %s, food: %s>", id, food, drink);
+  }
+
 }

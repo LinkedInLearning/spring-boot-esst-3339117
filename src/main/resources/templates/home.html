@@ -4,22 +4,46 @@
 <head>
   <title>Freddy's BBQ Joint - Menu</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link rel='stylesheet' href='/webjars/bootstrap/5.3.2/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="/webjars/bootstrap/5.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/webjars/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-  <h1>Welcome to Freddy's BBQ Joint</h1>
+
+  <div class="container">
+    <h1 class="text-center text-success">Welcome to Freddy's BBQ Joint <i class="fa-solid fa-bacon"></i></h1>
+
+    <div class="d-flex mb-3 mt-5">
+      <div class="p-2 justify-content-start">
+        <h4>Our Menu</h4>
+      </div>
+      <div class="flex-fill"></div>
+      <div class="p-2 d-flex justify-content-end">
+        <button type="button" class="btn btn-info">
+          <a class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="/orders"><i class="fa-solid fa-cart-shopping"></i> Order now!</a>
+        </button>
+      </div>
+    </div>
+
+
+
+    <div class="alert alert-warning" role="alert" th:if="${#lists.isEmpty(menuItems)}">
+      Oh f***, our menu is empty. Ask Freddy to put something on!
+    </div>
+
+    <div class="card mt-3" th:each="menuItem: ${menuItems}">
+      <div class="card-body">
+        <h5 class="card-title" th:id="${menuItem.id}">
+          <i th:if="${menuItem.drink}" class="fa-solid fa-whiskey-glass text-primary"></i>
+          <i th:if="${!menuItem.drink}" class="fa-solid fa-utensils text-danger"></i>
+          <span th:text="${menuItem.name}">Card title</span>
+        </h5>
+      </div>
+    </div>
+
+  </div>
+
 </body>
-
-<a href="/orders">Order some</a>
-
-<div class="alert alert-warning" role="alert" th:if="${#lists.isEmpty(menuItems)}">
-  Oh f***, our menu is empty. Ask Freddy to put something on!
-</div>
-
-<tr th:each="menuItem: ${menuItems}">
-  <td th:text="${menuItem.id}" />
-  <td th:text="${menuItem.name}" />
-</tr>
 
 </html>

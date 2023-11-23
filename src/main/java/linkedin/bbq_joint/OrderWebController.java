@@ -2,10 +2,13 @@ package linkedin.bbq_joint;
 
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +16,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 @RequestMapping("/orders")
 public class OrderWebController {
+
+  private final static Logger LOG = LoggerFactory.getLogger(OrderWebController.class);
 
   private MenuItemRepository menuItemRepository;
   private OrderRepository orderRepository;
@@ -50,8 +55,11 @@ public class OrderWebController {
     }
 
     var orderPlaced = this.orderRepository.save(order);
+
     model.addAttribute("orderPlaced", orderPlaced);
     model.addAttribute("sum", sum);
+
+    LOG.info("Order was placed : {}", orderPlaced);
 
     return "order-placed";
   }
