@@ -1,5 +1,8 @@
 # Spring Boot Grundkurs
 
+Hilfe für Ihre Challenge finden Sie unter:
+- https://www.baeldung.com/spring-mvc-form-tutorial
+
 Dies ist das Repository für den **LinkedIn Learning** Kurs `Spring Boot Grundkurs`. Den gesamten Kurs finden Sie auf [LinkedIn Learning][lil-course-url].
 
 ![COURSENAME][lil-thumbnail-url] 
