@@ -1,6 +1,8 @@
 # Spring Boot Grundkurs
 
-https://en.wikibooks.org/wiki/Java_Persistence/OneToMany
+Hilfe für Ihre Challenge finden Sie unter:
+- https://www.baeldung.com/spring-mvc-form-tutorial
+- https://en.wikibooks.org/wiki/Java_Persistence/ManyToOne
 
 Dies ist das Repository für den **LinkedIn Learning** Kurs `Spring Boot Grundkurs`. Den gesamten Kurs finden Sie auf [LinkedIn Learning][lil-course-url].
 
@@ -10,7 +12,6 @@ xxxxxxxxxx
 
 Zudem zeichnet sich der Kurs durch eine nahtlose Integration in GitHub CodeSpaces, einer cloudbasierten Entwicklungsumgebung (IDE), aus. Sie müssen keinen lokalen Rechner einrichten und können direkt zu jeder Zeit praktische Übungen durchführen.
 
-c
 ## Anleitung -----------------------> noch anzupassen
 
 Dieses Repository hat zwei Branches. Verwenden Sie das Ausklappmenü "Branch: ..." in GitHub um in den Branche "complete" zu wechseln. Dort sind alle zum Kurs gehörenden Dateien zum Mitmachen. Oder Sie fügen `/tree/BRANCH_NAME` der URL hinzu um direkt in den gewünschten Branch zu wechseln.
