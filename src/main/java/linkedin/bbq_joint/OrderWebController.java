@@ -28,7 +28,7 @@ public class OrderWebController {
   }
 
   @GetMapping()
-  public String getMethodName(Model model) {
+  public String get(Model model) {
     model.addAttribute("drinkItems", menuItemRepository.findByDrinkOrderByNameDesc(true));
     model.addAttribute("foodItems", menuItemRepository.findByDrinkOrderByNameDesc(false));
     model.addAttribute("orderForm", new OrderForm());
@@ -36,7 +36,7 @@ public class OrderWebController {
   }
 
   @PostMapping(value = "/place")
-  public String submit(@ModelAttribute OrderForm orderForm, Model model) {
+  public String place(@ModelAttribute OrderForm orderForm, Model model) {
     model.addAttribute("orderForm", orderForm);
 
     var order = new Order();
