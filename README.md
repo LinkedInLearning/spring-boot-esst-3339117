@@ -8,15 +8,14 @@ xxxxxxxxxx
 
 Zudem zeichnet sich der Kurs durch eine nahtlose Integration in GitHub CodeSpaces, einer cloudbasierten Entwicklungsumgebung (IDE), aus. Sie müssen keinen lokalen Rechner einrichten und können direkt zu jeder Zeit praktische Übungen durchführen.
 
+## Anleitung
 
-## Anleitung -----------------------> noch anzupassen
-
-Dieses Repository hat zwei Branches. Verwenden Sie das Ausklappmenü "Branch: ..." in GitHub um in den Branche "complete" zu wechseln. Dort sind alle zum Kurs gehörenden Dateien zum Mitmachen. Oder Sie fügen `/tree/BRANCH_NAME` der URL hinzu um direkt in den gewünschten Branch zu wechseln.
+Dieses Git Repository hat zu jedem Kapitel und Abschnitt Branches für Beginn und Ende. Zum Beispiel für Kapitel 5 "Daten dauerhaft Speicher" und Abschnitt "Mit Spring Data und JPA in die Datenbank speichern" gibt es den Branch `05_01b` für den Ausgangsstand und den Branch `05_01e` für den Endstand.
 
 ## Installation
 
 1. Um diese Übungsdateien nutzen zu können, müssen Sie folgendes installiert haben:
-   - [Go](https://go.dev/) Compiler
+   - [Java](https://www.java.com/de/) Compiler
    - [Visual Studio Code](https://code.visualstudio.com/) Editor
 2. Klonen Sie das Repository in Ihre lokale Maschine unter Verwendung von terminal (Mac), CMD (Windows) oder ein anderes Werkzeug mit grafischer Bedienoberfläche wie SourceTree.
 
