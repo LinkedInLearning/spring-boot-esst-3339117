@@ -2,30 +2,14 @@ package linkedin.bbq_joint;
 
 import java.util.UUID;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
-
-@Entity()
-@Table(name = "bbg_order")
 public class Order {
 
-  @Id
-  @GeneratedValue(strategy = GenerationType.UUID)
   private UUID id;
 
   private String name;
 
-  @ManyToOne()
-  @JoinColumn(name = "drink_id")
   private MenuItem drink;
 
-  @ManyToOne()
-  @JoinColumn(name = "food_id")
   private MenuItem food;
 
   public UUID getId() {

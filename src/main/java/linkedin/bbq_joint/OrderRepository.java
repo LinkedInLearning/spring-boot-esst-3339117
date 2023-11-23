@@ -1,9 +1,19 @@
 package linkedin.bbq_joint;
 
+import java.util.Optional;
 import java.util.UUID;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface OrderRepository extends CrudRepository<Order, UUID> {
+@Repository
+public class OrderRepository {
+
+  public Order save(Order order) {
+    return order;
+  }
+
+  public Optional<Order> findById(UUID id) {
+    return Optional.empty();
+  }
 
 }

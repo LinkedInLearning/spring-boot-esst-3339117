@@ -29,3 +29,7 @@ Content-Type: application/json
   "name": "Coleslaw Salad",
   "price": 3
 }
+
+### 
+
+POST http://localhost:8080/menu-items?drink=true

@@ -1,13 +1,28 @@
 package linkedin.bbq_joint;
 
+import java.util.Optional;
 import java.util.UUID;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface MenuItemRepository extends CrudRepository<MenuItem, UUID> {
+@Repository
+public class MenuItemRepository {
 
-  Iterable<MenuItem> findByOrderByDrinkDescNameDesc();
+  public Optional<MenuItem> findById(UUID id) {
+    return Optional.empty();
+  }
 
-  Iterable<MenuItem> findByDrinkOrderByNameDesc(boolean drink);
+  MenuItem save(MenuItem menuItem) {
+    return menuItem;
+  }
+
+  public Iterable<MenuItem> findByOrderByDrinkDescNameDesc() {
+    return null;
+  }
+
+  public Iterable<MenuItem> findByDrinkOrderByNameDesc(boolean drink) {
+    return null;
+
+  }
 
 }
