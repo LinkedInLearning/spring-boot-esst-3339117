@@ -4,9 +4,9 @@ Dies ist das Repository für den **LinkedIn Learning** Kurs `Spring Boot Grundku
 
 ![COURSENAME][lil-thumbnail-url] 
 
-xxxxxxxxxx
+Sie möchten Geschäftsanwendungen mit Java entwickeln, schnell produktiv sein und sich auf Ihre Fachlichkeit konzentrieren? Dann ist Spring Boot das Richtige für Sie: Das Open-Source-Werkzeug ist als Erweiterung des Spring-Frameworks konzipiert und erleichtert die Entwicklung von Webanwendungen und Microservices mit Java-basierten Frameworks enorm und vereinfacht die Architektur verteilter Systeme.<br><br>
 
-Zudem zeichnet sich der Kurs durch eine nahtlose Integration in GitHub CodeSpaces, einer cloudbasierten Entwicklungsumgebung (IDE), aus. Sie müssen keinen lokalen Rechner einrichten und können direkt zu jeder Zeit praktische Übungen durchführen.
+Jan Stamer erläutert in diesem LinkedIn Learning-Kurs die wesentlichen Konzepte von Spring Boot wie Beans und Component Scanning. Damit können Sie moderne Webanwendungen entwickeln, Ihre Daten per JPA in einer Datenbank speichern und Ihre Anwendung in Produktion zuverlässig betreiben. Mit der Hilfe von praktischen Challenge/Solution-Einheiten können Sie Ihren Wissensstand immer wieder überprüfen und Ihre Lösungen mit denen Ihres Trainers vergleichen.
 
 ## Anleitung
 
@@ -28,5 +28,5 @@ _Leading Software Developer_
 Sehen Sie sich andere Kurse des Autors auf [LinkedIn Learning](https://www.linkedin.com/learning/instructors/jan-stamer) an.
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: 
-[lil-thumbnail-url]: 
+[lil-course-url]: https://www.linkedin.com/learning/spring-boot-grundkurs-23739242
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/D560DAQFMVaqF7iDG3w/learning-public-crop_675_1200/0/1711541620517?e=2147483647&v=beta&t=uKMrdM-Ame2KULI8WRPMtbwZce8Yypwgy5vcydjLRMs
