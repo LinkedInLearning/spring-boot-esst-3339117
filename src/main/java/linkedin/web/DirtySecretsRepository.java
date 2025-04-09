@@ -18,7 +18,7 @@ public class DirtySecretsRepository {
   }
 
   Optional<DirtySecret> getById(String id) {
-    if (this.secrets.containsKey(id)) {
+    if (!this.secrets.containsKey(id)) {
       return Optional.empty();
     }
     return Optional.of(this.secrets.get(id));
